@@ -15,8 +15,3 @@ main {
 
   background-color: var(--color-canvas);
 }
-div:not(#root) {
-  height: 80vh;
-  width: 50px;
-  background-color: black;
-}

@@ -1,12 +1,15 @@
 import './styles/base.css'
+import { resumeContent } from './resume-content'
+import Resume from './components/resume'
 
-export default function App() {
+function App() {
   return (
     <>
     <main>
-      <div></div>
-      <div></div>
+      <Resume resumeContent={resumeContent} />
     </main>
     </>
   )
 }
+
+export default App
