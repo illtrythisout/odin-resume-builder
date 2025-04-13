@@ -1,5 +1,12 @@
-function App() {
-  return <h1>Helloo</h1>
-}
+import './styles/base.css'
 
-export default App
+export default function App() {
+  return (
+    <>
+    <main>
+      <div></div>
+      <div></div>
+    </main>
+    </>
+  )
+}

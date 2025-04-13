@@ -33,3 +33,9 @@ textarea,
 select {
   font: inherit;
 }
+#root {
+  min-width: 320px;
+  width: 100vw;
+
+  min-height: 100lvh;
+}

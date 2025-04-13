@@ -1,0 +1,22 @@
+:root {
+  --color-canvas: #f3f4f6;
+  --color-text-co: #030712;
+  --color-primary: #007595;
+  --color-primary-darker: #0092b8;
+  --color-primary-lighter: #005f78;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 100lvh;
+
+  background-color: var(--color-canvas);
+}
+div:not(#root) {
+  height: 80vh;
+  width: 50px;
+  background-color: black;
+}
