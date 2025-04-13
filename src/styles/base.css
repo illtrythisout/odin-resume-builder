@@ -1,17 +1,28 @@
 :root {
+  /* colors */
   --color-canvas: #f3f4f6;
+  --color-lighter: #ffffff;
+
   --color-text-co: #030712;
+
   --color-primary: #007595;
   --color-primary-darker: #0092b8;
   --color-primary-lighter: #005f78;
+
+  /* spacing */
+  --default-padding: 1rem;
 }
 
+#root {
+  color: var(--color-text-co);
+}
 main {
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   height: 100lvh;
+  padding: var(--default-padding);
 
   background-color: var(--color-canvas);
 }

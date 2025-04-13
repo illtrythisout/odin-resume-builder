@@ -1,5 +1,6 @@
+import '../styles/resume.css'
+
 function Resume({resumeContent}) {
-  console.log(resumeContent)
   return (
     <div id="resume">
 
@@ -8,7 +9,9 @@ function Resume({resumeContent}) {
         <span className="full-name">{resumeContent.general.fullName}</span>
         <div className="contact-details">
           <span>{resumeContent.general.city}</span>
+          <span>•</span>
           <span>{resumeContent.general.email}</span>
+          <span>•</span>
           <span>{resumeContent.general.phoneNo}</span>
         </div>
 
@@ -19,9 +22,10 @@ function Resume({resumeContent}) {
         <span className="section-title">Education</span>
         <hr />
 
-        {resumeContent.education.map(experience => {
+        <div className="section-content">
+          {resumeContent.education.map(experience => {
           return (
-            <div className="educationExperience">
+            <div className="educationExperience" key={experience.key}>
               <span>{experience.institutionName}</span>
               <span>{experience.place}</span>
               <span>{experience.degree}</span>
@@ -29,17 +33,19 @@ function Resume({resumeContent}) {
             </div>
           )
         })}
-
+        </div>
+        
       </div>
 
-      <div className="professionalExperience">
+      <div className="professional">
 
-      <span className="section-title">Professional Experience</span>
+        <span className="section-title">Professional Experience</span>
         <hr />
 
-        {resumeContent.professionalExperience.map(experience => {
+        <div className="section-content">
+          {resumeContent.professionalExperience.map(experience => {
           return (
-            <div className="educationExperience">
+            <div className="section-content professionalExperience" key={experience.key}>
               <span>{experience.institutionName}</span>
               <span>{experience.place}</span>
               <span>{experience.role}</span>
@@ -48,6 +54,7 @@ function Resume({resumeContent}) {
             </div>
           )
         })}
+        </div>
 
       </div>
 

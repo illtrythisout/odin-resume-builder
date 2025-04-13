@@ -1,0 +1,61 @@
+#resume {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-padding);
+  padding: 48px;
+  overflow: hidden;
+
+  height: 100%;
+
+  font-size: 10px;
+
+  border-radius: 10px;
+  background-color: var(--color-lighter);
+  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* general info */
+.general {
+  text-align: center;
+}
+.general .full-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.general .contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+/* section basics */
+.education,
+.professional {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-weight: bold;
+}
+.section-title {
+  font-size: 1.1em;
+}
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.section-content .educationExperience,
+.section-content .professionalExperience {
+  display: grid;
+  row-gap: 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-content span:nth-child(2),
+.section-content span:nth-child(4) {
+  justify-self: end;
+}
+
+/* professional experience section */
+.professionalExperience span:last-child {
+  font-weight: normal;
+}
