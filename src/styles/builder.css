@@ -1,0 +1,85 @@
+#builder {
+  padding: var(--default-padding);
+
+  height: 100vh;
+  width: max-content;
+
+  font-size: 1rem;
+  background-color: var(--color-primary);
+}
+#builder > h1 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.inputSections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-padding);
+
+  padding: var(--default-padding);
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-padding);
+
+  height: max-content;
+  padding: var(--default-padding);
+  overflow: hidden;
+
+  border-radius: var(--default-border-radius);
+  background-color: var(--color-canvas-darker);
+  box-shadow: var(--default-box-shadow);
+}
+.inputSection button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.5em;
+  font-weight: bold;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+.inputSection > button > svg {
+  --size: 1.5em;
+
+  transition: transform 0.5s ease;
+}
+.inputSection.closed > button > svg {
+  transform: rotate(0deg);
+}
+.inputSection.opened > button > svg {
+  transform: rotate(180deg);
+}
+
+.inputSection.closed > .inputsContainer {
+  display: none;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--default-padding) / 2);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+.inputs > span {
+  font-weight: bold;
+}
+.inputs > input {
+  padding: calc(var(--default-padding) / 4) calc(var(--default-padding) / 2);
+  border: none;
+  outline: none;
+  border-radius: calc(var(--default-border-radius) / 2);
+  background-color: var(--color-canvas);
+}
