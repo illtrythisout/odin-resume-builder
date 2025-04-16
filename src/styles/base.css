@@ -40,3 +40,9 @@ svg {
 
   fill: var(--color-text-co);
 }
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}

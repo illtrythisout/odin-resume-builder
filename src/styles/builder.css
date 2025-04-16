@@ -13,7 +13,7 @@
   font-weight: bold;
 }
 
-.inputSections {
+.input-sections {
   display: flex;
   flex-direction: column;
   gap: var(--default-padding);
@@ -21,7 +21,7 @@
   padding: var(--default-padding);
 }
 
-.inputSection {
+.input-section {
   display: flex;
   flex-direction: column;
   gap: var(--default-padding);
@@ -34,36 +34,31 @@
   background-color: var(--color-canvas-darker);
   box-shadow: var(--default-box-shadow);
 }
-.inputSection button {
+.input-section .input-title-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   font-size: 1.5em;
   font-weight: bold;
-
-  background-color: transparent;
-  border: none;
-
-  cursor: pointer;
 }
-.inputSection > button > svg {
+.input-section > .input-title-btn > svg {
   --size: 1.5em;
 
   transition: transform 0.5s ease;
 }
-.inputSection.closed > button > svg {
+.input-section.closed > .input-title-btn > svg {
   transform: rotate(0deg);
 }
-.inputSection.opened > button > svg {
+.input-section.opened > .input-title-btn > svg {
   transform: rotate(180deg);
 }
 
-.inputSection.closed > .inputsContainer {
+.input-section.closed > .inputs-container {
   display: none;
 }
 
-.inputsContainer {
+.inputs-container {
   display: flex;
   flex-direction: column;
   gap: calc(var(--default-padding) / 2);
@@ -82,4 +77,15 @@
   outline: none;
   border-radius: calc(var(--default-border-radius) / 2);
   background-color: var(--color-canvas);
+}
+
+.submit-inputs-btn {
+  padding: calc(var(--default-padding) / 4) calc(var(--default-padding) / 2);
+  border-radius: calc(var(--default-border-radius) / 2);
+  background-color: var(--color-primary-lighter);
+
+  transition: 0.2s ease-out;
+}
+.submit-inputs-btn:hover {
+  background-color: var(--color-primary);
 }
