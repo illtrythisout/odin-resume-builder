@@ -1,6 +1,6 @@
 import "./styles/base.css";
-import Resume from "./components/resume.jsx";
-import Builder from "./components/builder.jsx";
+import Resume from "./components/Resume.jsx"
+import Builder from "./components/Builder.jsx";
 import { useState } from "react";
 import { resumeContent as initialResumeContent } from "./resume-content.js"; // Import the initial content
 
