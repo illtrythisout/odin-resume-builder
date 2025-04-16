@@ -1,8 +1,8 @@
 import "./styles/base.css";
-import Resume from "./components/resume";
-import Builder from "./components/builder";
+import Resume from "./components/resume.jsx";
+import Builder from "./components/builder.jsx";
 import { useState } from "react";
-import { resumeContent as initialResumeContent } from "./resume-content"; // Import the initial content
+import { resumeContent as initialResumeContent } from "./resume-content.js"; // Import the initial content
 
 function App() {
   const [resumeContent, setResumeContent] = useState(initialResumeContent);

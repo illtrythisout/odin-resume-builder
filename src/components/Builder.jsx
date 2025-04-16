@@ -1,6 +1,6 @@
 import "../styles/builder.css";
 import { useState } from "react";
-import InputSection from "./input-section";
+import InputSection from "./input-section.jsx";
 
 function Builder({ onUpdateResume, resumeContent }) {
   const inputSections = {
